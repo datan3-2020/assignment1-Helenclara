@@ -132,7 +132,7 @@ In all cases, we want to create new variables.
 
 ``` r
 Data <- Data %>%
-        mutate(EU = ifelse(h_eumem==1,1,ifelse(h_eumem==2,2,NA))
+        mutate(EU = ifelse(h_eumem==1,1,ifelse(h_eumem==2,0,NA))
       
         ) %>%
         mutate(sex = ifelse(h_sex_dv==1,"male",ifelse(h_sex_dv==2,"female",NA))) %>%
@@ -160,8 +160,8 @@ Data %>%
     ## # A tibble: 3 x 3
     ##      EU     n  perc
     ##   <dbl> <int> <dbl>
-    ## 1     1 11118  48.4
-    ## 2     2  9338  40.7
+    ## 1     0  9338  40.7
+    ## 2     1 11118  48.4
     ## 3    NA  2501  10.9
 
 Write a couple of sentences with the interpretation of this result. How
@@ -186,7 +186,7 @@ your newly created variables.
 
 ``` r
 Data %>%
-      mutate(remain=ifelse(EU==1,TRUE,ifelse(EU==2,FALSE,NA)),leave=ifelse(EU==2,TRUE,ifelse(EU==1,FALSE,NA)))%>% 
+      mutate(remain=ifelse(EU==1,TRUE,ifelse(EU==0,FALSE,NA)),leave=ifelse(EU==0,TRUE,ifelse(EU==1,FALSE,NA)))%>% 
   group_by(sex,agegr) %>% 
   summarise(prop.remain=mean(remain,na.rm = TRUE)*100, prop.leave=mean(leave,na.rm = TRUE)*100)
 ```
