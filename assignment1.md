@@ -167,11 +167,11 @@ Data %>%
 Write a couple of sentences with the interpretation of this result. How
 this compares with the result of the 2016 referendum? Why?
 
-In the sample, more people supported Remain (48.43%) than Leave (40.68%)
-regarding the question of whether the UK should remain a member of the
-European Union. These results differ from the actual results of the 2016
-referendum where more people (51.9%) voted to leave the EU than to
-remain (48.1%)
+In the sample, more people (11,118) supported Remain (48.43%) than Leave
+(9338 people, 40.68%) regarding the question of whether the UK should
+remain a member of the European Union. These results differ from the
+actual results of the 2016 referendum where more people (51.9%) voted to
+leave the EU than to remain (48.1%)
 (<https://www.bbc.co.uk/news/politics/eu_referendum/results>). As there
 are 2501 NAs/missing values in the data, this might skew the results as
 they make up over 10% of the sample (if most of them would have
